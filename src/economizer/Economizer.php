@@ -25,6 +25,7 @@ use economizer\transistor\EconomyAPI;
 use economizer\transistor\PocketMoney;
 use economizer\transistor\MassiveEconomy;
 use economizer\transistor\EssentialsPE;
+use economizer\transistor\SimpleEconomy;
 
 class Economizer {
 
@@ -32,6 +33,7 @@ class Economizer {
 	const POCKET_MONEY		= "PocketMoney";
 	const MASSIVE_ECONOMY 		= "MassiveEconomy";
 	const ESSENTIALSPE		= "EssentialsPE";
+	const SIMPLE_ECONOMY		= "SimpleEconomy";
 	const DEFAULT_API		= self::ECONOMY_API;
 	
 	/** @var Economizer */
@@ -48,7 +50,8 @@ class Economizer {
 		self::ECONOMY_API		=> EconomyAPI::class,
 		self::POCKET_MONEY 		=> PocketMoney::class,
 		self::MASSIVE_ECONOMY 		=> MassiveEconomy::class,
-		self::ESSENTIALSPE		=> EssentialsPE::class
+		self::ESSENTIALSPE		=> EssentialsPE::class,
+		self::SIMPLE_ECONOMY		=> SimpleEconomy::class
 	];
 
 	public function __construct(Plugin $plugin, Transistor $transistor = null) {
